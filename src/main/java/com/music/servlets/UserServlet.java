@@ -1,4 +1,3 @@
-// UserServlet.java
 package com.music.servlets;
 
 import com.music.model.User;

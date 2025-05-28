@@ -8,7 +8,6 @@
 
     <display-name>Music Application</display-name>
 
-    <!-- Контекстные параметры для БД -->
     <context-param>
         <param-name>db.url</param-name>
         <param-value>jdbc:h2:mem:music_db;DB_CLOSE_DELAY=-1;MODE=MySQL</param-value>
@@ -22,12 +21,11 @@
         <param-value></param-value>
     </context-param>
 
-    <!-- Слушатель для инициализации БД -->
     <listener>
         <listener-class>com.music.listener.AppContextListener</listener-class>
     </listener>
 
-    <!-- Сервлеты -->
+
     <servlet>
         <servlet-name>MainServlet</servlet-name>
         <servlet-class>com.music.servlets.MainServlet</servlet-class>
@@ -65,12 +63,11 @@
         <url-pattern>/playlists/*</url-pattern>
     </servlet-mapping>
 
-    <!-- Настройки сессии -->
+
     <session-config>
         <session-timeout>30</session-timeout>
     </session-config>
 
-    <!-- Стартовая страница -->
     <welcome-file-list>
         <welcome-file>index.jsp</welcome-file>
     </welcome-file-list>
